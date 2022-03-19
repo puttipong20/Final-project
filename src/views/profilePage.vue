@@ -1,29 +1,32 @@
 <template>
   <div class="container">
-    <div>
-      <table>
-        <tr>
-          <td>user name :</td>
-          <td>{{ name }}</td>
-        </tr>
-        <tr>
-          <td>user ID :</td>
-          <td>{{ uid }}</td>
-        </tr>
-        <tr>
-          <td>Email :</td>
-          <td>{{ email }}</td>
-        </tr>
-        <tr>
-          <td>phone No. :</td>
-          <td>{{ phone }}</td>
-        </tr>
-        <tr>
-          <td>password :</td>
-          <td>{{ password }}</td>
-        </tr>
-      </table>
-      <q-btn color="red" @click="Deluser(docID)">Delete Account</q-btn>
+    <div class="q-pa-md">
+      <q-markup-table>
+        <tbody>
+          <tr>
+            <td class="text-left">User Name :</td>
+            <td class="text-center">{{ name }}</td>
+          </tr>
+          <tr>
+            <td class="text-left">Uid :</td>
+            <td class="text-center">{{ uid }}</td>
+          </tr>
+          <tr>
+            <td class="text-left">Email :</td>
+            <td class="text-center">{{ email }}</td>
+          </tr>
+          <tr>
+            <td class="text-left">Phone number:</td>
+            <td class="text-center">{{ phone }}</td>
+          </tr>
+          <tr>
+            <td class="text-left">Passwork</td>
+            <td class="text-center">{{ password }}</td>
+          </tr>
+        </tbody>
+      </q-markup-table>
+
+      <q-btn color="red" class="b" @click="Deluser(docID)">Delete Account</q-btn>
     </div>
   </div>
 </template>
@@ -119,5 +122,8 @@ tr,
 td {
   text-align: left;
   padding: 10px;
+}
+.b{
+  margin-top: 10px;
 }
 </style>
